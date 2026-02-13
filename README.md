@@ -52,9 +52,9 @@ vercel --prod
 
 ## 📬 Contact
 
-- GitHub: https://github.com/DaniJani2025
 - LinkedIn: https://www.linkedin.com/in/dhananjay-jani-6b8367281/
 - Email: hello@danijani.com
+- GitHub: https://github.com/DaniJani2025
 
 ---
 
