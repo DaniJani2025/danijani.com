@@ -11,6 +11,24 @@ const skills = [
   "REST API Architecture",
 ];
 
+const projects = [
+  {
+    title: "Project Placeholder 01",
+    description:
+      "Dummy deployment in progress. Planned to showcase a .NET 8 backend with React frontend and production-ready API integration.",
+  },
+  {
+    title: "Project Placeholder 02",
+    description:
+      "Dummy deployment in progress. Planned to highlight database design, query optimization, and secure authentication workflows.",
+  },
+  {
+    title: "Project Placeholder 03",
+    description:
+      "Dummy deployment in progress. Planned to demonstrate encryption-aware data handling and end-to-end application architecture.",
+  },
+];
+
 export default function App() {
   return (
     <main className="page">
@@ -48,6 +66,18 @@ export default function App() {
 
       <section className="panel">
         <Experience />
+      </section>
+
+      <section className="panel">
+        <h3 className="section-title">Selected Projects</h3>
+        <div className="project-grid">
+          {projects.map((project) => (
+            <article key={project.title} className="project-card">
+              <h4>{project.title}</h4>
+              <p>{project.description}</p>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );
