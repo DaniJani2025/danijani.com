@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import SocialLinks from "./components/SocialLinks";
 import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 
 const skills = [
   "C# / .NET 8",
@@ -78,6 +79,10 @@ export default function App() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="panel footer-panel">
+        <Footer />
       </section>
     </main>
   );
