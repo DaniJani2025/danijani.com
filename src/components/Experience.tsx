@@ -1,31 +1,30 @@
 export default function Experience() {
   return (
-    <div
-      style={{
-        borderLeft: "2px solid #1e293b",
-        paddingLeft: "1.25rem",
-        marginTop: "2rem",
-      }}
-    >
-      <p style={{ color: "#64748b", fontSize: "0.85rem", marginBottom: "0.4rem" }}>
-        EXPERIENCE
+    <article className="experience">
+      <h3 className="section-title">Experience</h3>
+      <p className="role">Software Developer</p>
+      <p className="org">Cygnet.One</p>
+      <p className="duration">1 year</p>
+      <p className="copy">
+        Worked across automation and full-stack delivery, building production
+        workflows for scraping, document processing, financial reconciliation,
+        and web applications.
       </p>
-
-      <h3 style={{ margin: 0 }}>Software Developer</h3>
-
-      <p style={{ color: "#94a3b8", margin: "4px 0" }}>
-        Cygnet.One
-      </p>
-
-      <p style={{ color: "#64748b", fontSize: "0.9rem", marginBottom: "0.6rem" }}>
-        1 year
-      </p>
-
-      <p style={{ color: "#cbd5e1", lineHeight: 1.5 }}>
-        Built and maintained backend services and user interfaces using Python,
-        .NET, and React, contributing to scalable enterprise solutions and
-        performance-focused application workflows.
-      </p>
-    </div>
+      <ul className="experience-list">
+        <li>Built Python Selenium web scraping projects and Flask APIs.</li>
+        <li>Developed PDF extractors/generators and general automation bots.</li>
+        <li>Implemented financial automation for Excel reconciliation tasks.</li>
+        <li>Built backend APIs using ASP.NET Core with .NET 8.</li>
+        <li>Delivered frontend features in React for full-stack projects.</li>
+        <li>
+          Worked with Microsoft SQL Server and PostgreSQL, including database
+          triggers.
+        </li>
+        <li>
+          Used Entity Framework Core (.NET 8) as the primary ORM for data
+          access.
+        </li>
+      </ul>
+    </article>
   );
 }
