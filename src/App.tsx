@@ -1,36 +1,37 @@
+import Hero from "./components/Hero";
+import SocialLinks from "./components/SocialLinks";
+import Experience from "./components/Experience";
+
 export default function App() {
+  const isMobile = window.innerWidth < 900;
+
   return (
     <main
       style={{
-        maxWidth: "1100px",
+        maxWidth: "1000px",
         margin: "0 auto",
-        padding: "4rem 2rem",
+        padding: isMobile ? "1.6rem 1.4rem" : "2.8rem 2.4rem",
       }}
     >
-      <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>
-        Dhananjay Jani
-      </h1>
-
-      <h2
+      <div
         style={{
-          fontSize: "1.5rem",
-          fontWeight: 400,
-          marginBottom: "1rem",
-          color: "#94a3b8",
+          display: "flex",
+          flexDirection: isMobile ? "column" : "row",
+          gap: isMobile ? "2.5rem" : "4rem",
+          alignItems: "flex-start",
         }}
       >
-        Full-Stack Developer
-      </h2>
+        <div style={{ flex: 2 }}>
+          <Hero isMobile={isMobile} />
+          <div style={{ marginTop: "1.6rem" }}>
+            <SocialLinks />
+          </div>
+        </div>
 
-      <p
-        style={{
-          maxWidth: "520px",
-          lineHeight: 1.6,
-          color: "#cbd5e1",
-        }}
-      >
-        I build scalable web applications and interactive digital experiences.
-      </p>
+        <div style={{ flex: 1 }}>
+          <Experience />
+        </div>
+      </div>
     </main>
   );
 }
