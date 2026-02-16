@@ -184,6 +184,7 @@ a {
   border-radius: 12px;
   border: 1px solid #264253;
   background: linear-gradient(160deg, rgb(15 26 36 / 95%), rgb(11 18 26 / 95%));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card h4 {
@@ -195,6 +196,38 @@ a {
   color: #c9dae8;
   line-height: 1.55;
   font-size: 0.96rem;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+}
+
+/* title default */
+.project-title-link {
+  color: #d1ff86;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* arrow */
+.project-title-link .arrow {
+  margin-left: 6px;
+  opacity: 0.6;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* 🔥 hover card → light up title */
+.project-card:hover .project-title-link {
+  color: #caff4a;
+  text-shadow: 0 0 10px rgba(158, 240, 26, 0.75);
+}
+
+/* move arrow when card hovered */
+.project-card:hover .project-title-link .arrow {
+  transform: translateX(4px);
+  opacity: 1;
 }
 
 .footer-panel {
