@@ -67,28 +67,29 @@ export default function App() {
 
       <section className="panel">
         <h3 className="section-title">Selected Projects</h3>
-          <div className="project-grid">
-            {projects.map((project) => (
-              <article className="project-card">
-                <h4>
-                  {project.url ? (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-title-link"
-                    >
-                      {project.title} <span className="arrow">↗</span>
-                    </a>
-                  ) : (
-                    project.title
-                  )}
-                </h4>
-
-                <p>{project.description}</p>
-              </article>
-            ))}
-          </div>
+<div className="project-grid">
+  {projects.map((project) =>
+    project.url ? (
+      <a
+        key={project.title}
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-card project-link"
+      >
+        <h4 className="project-title-link">
+          {project.title} <span className="arrow">↗</span>
+        </h4>
+        <p>{project.description}</p>
+      </a>
+    ) : (
+      <article key={project.title} className="project-card">
+        <h4>{project.title}</h4>
+        <p>{project.description}</p>
+      </article>
+    )
+  )}
+</div>
       </section>
 
       <section className="panel footer-panel">
