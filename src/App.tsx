@@ -19,11 +19,6 @@ const projects = [
       "Unity Web game rebuilt for the browser with mobile touch controls, optimized performance, and responsive fullscreen gameplay.",
     url: "https://flappy-bird-web-six.vercel.app"
   },
-  {
-    title: "Project Placeholder 02",
-    description:
-      "Dummy deployment in progress. Planned to highlight database design, query optimization, and secure authentication workflows.",
-  },
 ];
 
 export default function App() {
